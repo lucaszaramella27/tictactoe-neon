@@ -1,0 +1,54 @@
+############################
+# ENV / SECRETS
+############################
+.env
+.env.*
+!.env.example
+
+############################
+# PYTHON
+############################
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.venv/
+venv/
+ENV/
+env/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+############################
+# NODE / FRONTEND
+############################
+node_modules/
+dist/
+build/
+.vite/
+.cache/
+
+############################
+# DOCKER
+############################
+*.log
+docker-data/
+pgdata/
+
+############################
+# OS / EDITORS
+############################
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+
+############################
+# TEST / COVERAGE
+############################
+.coverage
+htmlcov/

@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px circle at 20% 10%, rgba(99,102,241,.18), transparent 55%),
+              radial-gradient(900px circle at 80% 20%, rgba(34,211,238,.16), transparent 55%),
+              radial-gradient(900px circle at 50% 80%, rgba(236,72,153,.10), transparent 60%),
+              #070A12;
+  overflow-x: hidden;
+}
+
+@keyframes floaty {
+  0% { transform: translate3d(0,0,0); }
+  50% { transform: translate3d(0,-8px,0); }
+  100% { transform: translate3d(0,0,0); }
+}
+
+@keyframes gridMove {
+  0% { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(-120px,-120px,0); }
+}
+
+.neon-grid {
+  position: absolute;
+  inset: -40%;
+  background-image:
+    linear-gradient(rgba(34,211,238,.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,.10) 1px, transparent 1px);
+  background-size: 60px 60px;
+  filter: blur(0.2px);
+  animation: gridMove 18s linear infinite;
+  opacity: .55;
+  pointer-events: none;
+}
+
+.glass {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.neon-outline {
+  box-shadow:
+    0 0 0 1px rgba(34,211,238,.22),
+    0 0 32px rgba(34,211,238,.18),
+    0 0 90px rgba(99,102,241,.10);
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid rgba(34,211,238,.9);
+  outline-offset: 3px;
+}
